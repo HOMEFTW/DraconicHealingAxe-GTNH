@@ -1,0 +1,9 @@
+[
+  {
+    "modid": "draconichealingaxe",
+    "name": "DraconicHealingAxe-GTNH",
+    "version": "${modVersion}",
+    "mcversion": "1.7.10",
+    "description": "Gives any equipped Draconic Evolution draconic armor piece the held Healing Axe hunger and saturation refill effect."
+  }
+]
