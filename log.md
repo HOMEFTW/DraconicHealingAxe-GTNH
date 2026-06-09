@@ -1,5 +1,18 @@
 # 开发日志
 
+## 2026-06-09：发布 0.2.0-beta
+
+### 已完成
+- 将 `modVersion` 从 `0.1.1` 升级为 `0.2.0-beta`。
+- 重新构建并生成 `draconichealingaxe-0.2.0-beta.jar`、`draconichealingaxe-0.2.0-beta-dev.jar` 和 `draconichealingaxe-0.2.0-beta-sources.jar`。
+- 准备将提交、tag `0.2.0-beta` 和构建产物发布到 GitHub。
+
+### 决策
+- 使用不带 `v` 前缀的 tag `0.2.0-beta`，保持与已有 tag `0.1.1` 一致。
+- 将 GitHub Release 标记为 prerelease，因为版本号包含 `beta`。
+
+---
+
 ## 2026-06-09：移植到 GTNH 2.9 beta 1
 
 ### 已完成

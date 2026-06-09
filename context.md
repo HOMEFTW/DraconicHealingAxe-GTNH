@@ -3,6 +3,7 @@
 ## 基本信息
 - Mod Name: DraconicHealingAxe-GTNH
 - Mod ID: draconichealingaxe
+- Mod Version: 0.2.0-beta
 - Package: com.github.skystardust.draconichealingaxe
 - Target: Minecraft 1.7.10 + Forge 10.13.4.1614 + GTNH 2.9.0-beta-1 convention
 - Build JDK: `JAVA_HOME` 指向 Zulu25；`gradle.properties` 使用 `org.gradle.java.installations.fromEnv = JAVA_HOME`
@@ -60,9 +61,9 @@
 - `JAVA_HOME=C:\Program Files\Zulu\zulu-25` + `D:\Code\.gtnh-manifests\gradlew-offline.ps1 --gradle-user-home D:\Code\.tools\gradle-home-java25 build`：通过。
 
 ## 可重新生成的构建产物
-- `build/libs/draconichealingaxe-0.1.1.jar`
-- `build/libs/draconichealingaxe-0.1.1-dev.jar`
-- `build/libs/draconichealingaxe-0.1.1-sources.jar`
+- `build/libs/draconichealingaxe-0.2.0-beta.jar`
+- `build/libs/draconichealingaxe-0.2.0-beta-dev.jar`
+- `build/libs/draconichealingaxe-0.2.0-beta-sources.jar`
 
 ## 本地工作区
 - 已清理 `.gradle/`、`build/`、`run/`、`bin/` 和 `##dummy`；这些内容是本地生成物或临时文件，不作为仓库实现内容保留。
