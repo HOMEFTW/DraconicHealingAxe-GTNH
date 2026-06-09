@@ -7,7 +7,7 @@
 - [ ] 可选配置补给频率、每次补饥饿量、饱和量和营养值平衡步长。
 
 ## 已完成
-- [x] 将版本升级到 `0.2.0-beta`，并准备发布 GitHub Release。
+- [x] 将版本升级到 `0.2.0-beta`，并发布 GitHub Release。
 - [x] 将项目移植到 GTNH `2.9.0-beta-1`，并完成 `compileJava`、`build` 和 jar 打包验证。
 - [x] 清理本地生成目录 `.gradle/`、`build/`、`run/`、`bin/` 和临时文件 `##dummy`，并将 `bin/` 加入 `.gitignore`。
 - [x] 修复 `log.md`、`ToDOLIST.md`、`context.md` 的中文乱码。

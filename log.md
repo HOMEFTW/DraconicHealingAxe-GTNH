@@ -5,7 +5,7 @@
 ### 已完成
 - 将 `modVersion` 从 `0.1.1` 升级为 `0.2.0-beta`。
 - 重新构建并生成 `draconichealingaxe-0.2.0-beta.jar`、`draconichealingaxe-0.2.0-beta-dev.jar` 和 `draconichealingaxe-0.2.0-beta-sources.jar`。
-- 准备将提交、tag `0.2.0-beta` 和构建产物发布到 GitHub。
+- 已将提交 `a50a3aa`、tag `0.2.0-beta` 和构建产物发布到 GitHub Release。
 
 ### 决策
 - 使用不带 `v` 前缀的 tag `0.2.0-beta`，保持与已有 tag `0.1.1` 一致。

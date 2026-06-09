@@ -9,6 +9,7 @@
 - Build JDK: `JAVA_HOME` 指向 Zulu25；`gradle.properties` 使用 `org.gradle.java.installations.fromEnv = JAVA_HOME`
 - 镜像配置：Gradle wrapper 使用 `https://mirrors.cloud.tencent.com/gradle/gradle-9.2.1-bin.zip`；plugin 仓库优先使用阿里云、腾讯云、华为云镜像并保留 GTNH Maven / JitPack 回退。
 - Manifest: `elytra.manifest.version = 2.9.0-beta-1`；`dependencies.gradle` 使用 `elytraModpackVersion.gtnh(...)` 解析 GTNH 模组版本。
+- GitHub Release: `https://github.com/HOMEFTW/DraconicHealingAxe-GTNH/releases/tag/0.2.0-beta`
 
 ## 已实现内容
 
