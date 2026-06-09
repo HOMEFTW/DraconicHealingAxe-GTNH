@@ -4,8 +4,10 @@
 - Mod Name: DraconicHealingAxe-GTNH
 - Mod ID: draconichealingaxe
 - Package: com.github.skystardust.draconichealingaxe
-- Target: Minecraft 1.7.10 + Forge 10.13.4.1614 + GTNH convention
+- Target: Minecraft 1.7.10 + Forge 10.13.4.1614 + GTNH 2.9.0-beta-1 convention
 - Build JDK: `JAVA_HOME` 指向 Zulu25；`gradle.properties` 使用 `org.gradle.java.installations.fromEnv = JAVA_HOME`
+- 镜像配置：Gradle wrapper 使用 `https://mirrors.cloud.tencent.com/gradle/gradle-9.2.1-bin.zip`；plugin 仓库优先使用阿里云、腾讯云、华为云镜像并保留 GTNH Maven / JitPack 回退。
+- Manifest: `elytra.manifest.version = 2.9.0-beta-1`；`dependencies.gradle` 使用 `elytraModpackVersion.gtnh(...)` 解析 GTNH 模组版本。
 
 ## 已实现内容
 
@@ -42,9 +44,10 @@
 无。
 
 ## 依赖
-- Draconic Evolution：运行时必需，用于提供 Draconic 套装。
-- AppleCore：运行时必需，用于安全设置 hunger 和 saturation。
-- Nutrition：运行时可选；存在时启用营养值向 50% 平衡，缺失时静默跳过。
+- Draconic Evolution `1.5.26-GTNH`：运行时必需，用于提供 Draconic 套装。
+- AppleCore `3.3.11`：编译与运行时必需，用于安全设置 hunger 和 saturation。
+- Nutrition `0.1.9`：运行时可选；存在时启用营养值向 50% 平衡，缺失时静默跳过。
+- JUnit Jupiter `5.10.2` 与 JUnit Platform Launcher `1.10.2`：测试依赖。
 
 ## 架构说明
 - 模组不修改 Draconic Evolution、AppleCore、Extra Utilities 或 Nutrition 源码。
@@ -53,10 +56,13 @@
 - Nutrition 适配通过反射实现，`@Mod` 依赖声明使用 `after:nutrition`，避免将 Nutrition 变成硬依赖。
 
 ## 验证状态
-- `.\gradlew.bat test --tests com.github.skystardust.draconichealingaxe.nutrition.NutritionBalanceServiceTest`：通过。
-- `.\gradlew.bat build`：通过。
+- `JAVA_HOME=C:\Program Files\Zulu\zulu-25` + `D:\Code\.gtnh-manifests\gradlew-offline.ps1 --gradle-user-home D:\Code\.tools\gradle-home-java25 compileJava`：通过。
+- `JAVA_HOME=C:\Program Files\Zulu\zulu-25` + `D:\Code\.gtnh-manifests\gradlew-offline.ps1 --gradle-user-home D:\Code\.tools\gradle-home-java25 build`：通过。
 
-## 构建产物
+## 可重新生成的构建产物
 - `build/libs/draconichealingaxe-0.1.1.jar`
 - `build/libs/draconichealingaxe-0.1.1-dev.jar`
 - `build/libs/draconichealingaxe-0.1.1-sources.jar`
+
+## 本地工作区
+- 已清理 `.gradle/`、`build/`、`run/`、`bin/` 和 `##dummy`；这些内容是本地生成物或临时文件，不作为仓库实现内容保留。

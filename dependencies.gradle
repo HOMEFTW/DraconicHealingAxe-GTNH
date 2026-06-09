@@ -1,6 +1,21 @@
+elytraModpackVersion {
+    gtnhVersion = "2.9.0-beta-1"
+    // elytra-conventions v1.1.x treats this as useCache; true lets the local manifest cache be used.
+    manifestNoCache = true
+    attachManifestVersionToJar = false
+}
+
 dependencies {
-    compileOnly("com.github.GTNewHorizons:AppleCore:3.3.5:dev") { transitive = false }
+    implementation(gtnhDev("AppleCore")) { transitive = false }
+    runtimeOnlyNonPublishable(gtnhDev("Draconic-Evolution")) { transitive = false }
+    runtimeOnlyNonPublishable(gtnhDev("Nutrition")) { transitive = false }
 
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.10.2')
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.10.2')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher:1.10.2')
+}
+
+@SuppressWarnings('GrMethodMayBeStatic')
+String gtnhDev(String name, String classifier = "dev") {
+    return elytraModpackVersion.gtnh(name, classifier)
 }
